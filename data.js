@@ -94,7 +94,8 @@ var subjects =
 	{name: "Artikel 1", position: "contra", explanation: "Anoniem solliciteren legt de verantwoordelijkheid om arbeidsdiscriminatie tegen te gaan bij de sollicitant. Artikel 1 pleit voor voorlichting onder werkgevers en diversiteitsquota. Wij vinden het onacceptabel om mensen te vragen een deel van hun identiteit te verhullen om geaccepteerd te worden."},
 	{name: "Libertarische Partij", position: "contra", explanation: "We willen geen discriminatie bij de overheid zien. Artikel 1 van de grondwet verbiedt dit. Keuzes voor aanstellingen bij de overheid dienen op basis van kwaliteiten die onderzocht moeten kunnen worden. Daarbij past anoniem solliciteren niet."}
 	] 
-}
+},
+
 ];
 
 var parties = [
@@ -120,33 +121,33 @@ var parties = [
 ];
 var eens = 0;
 function e(){
-	eens = eens+1;
+	eens ++;
 }
 var oneens = 0;
 function o(){
-	oneens = oneens+1;
+	oneens ++;
 }
 var geen = 0;
 function g(){
-	var geen = geen+1;
+	geen ++;
 }
 function start() {
 	console.log("Test start()");
 
 	var opt1 = document.getElementById('option1');
 	opt1.innerHTML = 'mee eens';
-	opt1.setAttribute("onClick", "javascript:q2();");
+	opt1.setAttribute("onClick", "javascript:q2(); javascript:e()");
 
 	document.getElementById('level_title').innerHTML = 'bindend referendum';
 	document.getElementById('description').innerHTML = 'Er moet een bindend referendum komen, waarmee burgers door het parlement aangenomen wetten kunnen tegenhouden.';
 
 	var opt2 = document.getElementById('option2');
 	opt2.innerHTML = 'geen van beide';
-	opt2.setAttribute("onClick", "javascript:q2();");
+	opt2.setAttribute("onClick", "javascript:q2(); javascript:g()");
 
 	var opt3 = document.getElementById('option3');
 	opt3.innerHTML = 'mee on eens';
-	opt3.setAttribute("onClick", "javascript:q2();");
+	opt3.setAttribute("onClick", "javascript:q2(); javascript:o()");
 
 	var opt4 = document.getElementById('option4');
 	opt4.innerHTML = 'sla deze vraag over';
@@ -157,23 +158,725 @@ function start() {
 function q2() {
 	console.log("Question 2()");
 	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
 
 	var opt1 = document.getElementById('option1');
 	opt1.innerHTML = 'mee eens';
-	opt1.setAttribute("onClick", "javascript:q3();");
+	opt1.setAttribute("onClick", "javascript:q3(); javascript:e()");
 
 	document.getElementById('level_title').innerHTML = 'Maatschappelijke dienstplicht';
 	document.getElementById('description').innerHTML = 'Er moet een maatschappelijke dienstplicht voor jongeren komen. Zij kunnen dan dienen in het leger, bij de politie of in de zorg.';
 
 	var opt2 = document.getElementById('option2');
 	opt2.innerHTML = 'geen van beide';
-	opt2.setAttribute("onClick", "javascript:q3();");
+	opt2.setAttribute("onClick", "javascript:q3(); javascript:g()");
 
 	var opt3 = document.getElementById('option3');
 	opt3.innerHTML = 'mee on eens';
-	opt3.setAttribute("onClick", "javascript:q3();");
+	opt3.setAttribute("onClick", "javascript:q3(); javascript:o()");
 
 	var opt4 = document.getElementById('option4');
 	opt4.innerHTML = 'sla deze vraag over';
 	opt4.setAttribute("onClick", "javascript:q3();");
+}
+function q3() {
+	console.log("Question 3()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q4(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Anoniem solliciteren';
+	document.getElementById('description').innerHTML = 'Om discriminatie op basis van de naam te voorkomen, moet anoniem solliciteren bij de overheid en bij openbare instellingen de regel worden.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q4(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q4(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q4();");
+}
+function q4() {
+	console.log("Question 4()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q5(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Groepsbelediging';
+	document.getElementById('description').innerHTML = 'Belediging van groepen op grond van ras, godsdienst of geaardheid moet niet langer strafbaar zijn.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q5(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q5(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q5();");
+}
+function q5() {
+	console.log("Question 5()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q6(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Teelt en verkoop wiet';
+	document.getElementById('description').innerHTML = 'De teelt en verkoop van wiet moet legaal worden.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q6(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q6(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q6();");
+}
+function q6() {
+	console.log("Question 6()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q7(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Vervroegde vrijlating';
+	document.getElementById('description').innerHTML = 'De vervroegde vrijlating onder voorwaarden van gevangenen moet stoppen. Zij moeten hun straf helemaal uitzitten.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q7(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q7(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q7();");
+}
+function q7() {
+	console.log("Question 7()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q8(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Vennootschapsbelasting';
+	document.getElementById('description').innerHTML = 'De belasting over de winst van ondernemingen (vennootschapsbelasting) moet omlaag.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q8(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q8(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q8();");
+}
+function q8() {
+	console.log("Question 8()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q9(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Belasting hoogste inkomens';
+	document.getElementById('description').innerHTML = 'De hoogste inkomensgroepen moeten meer belasting gaan betalen.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q9(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q9(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q9();");
+}
+function q9() {
+	console.log("Question 9()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q10(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Tijdelijke arbeidscontracten';
+	document.getElementById('description').innerHTML = 'De periode waarbinnen je meerdere tijdelijke arbeidscontracten na elkaar kunt afsluiten, moet langer worden dan twee jaar.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q10(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q10(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q10();");
+}
+function q10() {
+	console.log("Question 10()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q11(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'AOW-leeftijd 65';
+	document.getElementById('description').innerHTML = 'De AOW-leeftijd moet weer 65 jaar worden.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q11(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q11(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q11();");
+}
+function q11() {
+	console.log("Question 11()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q12(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Verzekering zzpers';
+	document.getElementById('description').innerHTML = 'Er moet een verplichte verzekering tegen arbeidsongeschiktheid en ziekte komen voor alle zelfstandigen zonder personeel (zzpers).';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q12(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q12(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q12();");
+}
+function q12() {
+	console.log("Question 12()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q13(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Leenstelsel studenten';
+	document.getElementById('description').innerHTML = 'Het leenstelsel voor studenten moet worden afgeschaft. De basisbeurs moet weer terugkomen.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q13(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q13(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q13();");
+}
+function q13() {
+	console.log("Question 13()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q14(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Geld cultuur';
+	document.getElementById('description').innerHTML = 'Er moet meer geld naar kunst en cultuur.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q14(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q14(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q14();");
+}
+function q14() {
+	console.log("Question 14()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q15(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Islamitische immigranten';
+	document.getElementById('description').innerHTML = 'Nederland moet de grenzen sluiten voor islamitische immigranten.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q15(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q15(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q15();");
+}
+function q15() {
+	console.log("Question 15()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q16(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Kinderpardon';
+	document.getElementById('description').innerHTML = 'In Nederland opgegroeide kinderen van asielzoekers moeten hier kunnen blijven (kinderpardon).';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q16(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q16(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q16();");
+}
+function q16() {
+	console.log("Question 16()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q17(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Onderdak illegalen';
+	document.getElementById('description').innerHTML = 'De regering moet gemeenten verbieden illegale vreemdelingen onderdak te geven.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q17(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q17(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q17();");
+}
+function q17() {
+	console.log("Question 17()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q18(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Hypotheekrente';
+	document.getElementById('description').innerHTML = 'De regeling voor de aftrek van de hypotheekrente moet niet verder worden aangetast.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q18(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q18(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q18();");
+}
+function q18() {
+	console.log("Question 18()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q19(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Verhuurdersheffing';
+	document.getElementById('description').innerHTML = 'Woningcorporaties moeten meer goedkope huurwoningen bouwen. Daarom moet de belasting die zij betalen over huurwoningen (verhuurdersheffing) worden afgeschaft.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q19(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q19(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q19();");
+}
+function q19() {
+	console.log("Question 19()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q20(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Schiphol';
+	document.getElementById('description').innerHTML = 'Luchthaven Schiphol moet kunnen uitbreiden.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q20(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q20(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q20();");
+}
+function q20() {
+	console.log("Question 20()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q21(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Kilometerheffing';
+	document.getElementById('description').innerHTML = 'De regering moet niet het bezit van de auto, maar het aantal gereden kilometers belasten.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q21(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q21(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q21();");
+}
+function q21() {
+	console.log("Question 21()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q22(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Nieuwe wegen';
+	document.getElementById('description').innerHTML = 'Er moet meer geld naar de aanleg van nieuwe wegen.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q22(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q22(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q22();");
+}
+function q22() {
+	console.log("Question 22()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q23(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Kolencentrales';
+	document.getElementById('description').innerHTML = 'Alle kolencentrales mogen voorlopig open blijven.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q23(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q23(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q23();");
+}
+function q23() {
+	console.log("Question 23()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q24(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Btw-tarief vlees';
+	document.getElementById('description').innerHTML = 'Voor vlees moet het hoge btw-tarief van 21 procent gaan gelden.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q24(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q24(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q24();");
+}
+function q24() {
+	console.log("Question 24()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q25(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Voltooid leven';
+	document.getElementById('description').innerHTML = 'Ouderen die vinden dat hun leven voltooid is moeten hulp kunnen krijgen om een einde aan hun leven te maken.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q25(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q25(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q25();");
+}
+function q25() {
+	console.log("Question 25()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q26(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Afschaffing eigen risico';
+	document.getElementById('description').innerHTML = 'Het eigen risico in de zorg moet worden afgeschaft, ook als dat betekent dat de premies omhoog gaan.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q26(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q26(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q26();");
+}
+function q26() {
+	console.log("Question 26()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q27(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Landelijk zorgfonds';
+	document.getElementById('description').innerHTML = 'Er moet een landelijk zorgfonds komen, zodat het stelsel van particuliere zorgverzekeraars kan verdwijnen.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q27(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q27(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q27();");
+}
+function q27() {
+	console.log("Question 27()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q28(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Defensie-uitgaven';
+	document.getElementById('description').innerHTML = 'De uitgaven voor defensie moeten de komende jaren fors omhoog naar 2 procent van het nationale inkomen (de NAVO-norm).';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q28(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q28(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q28();");
+}
+function q28() {
+	console.log("Question 28()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q29(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Europees leger';
+	document.getElementById('description').innerHTML = 'Er moet een Europees leger komen.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q29(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q29(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q29();");
+}
+function q29() {
+	console.log("Question 29()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:q30(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Ontwikkelingshulp';
+	document.getElementById('description').innerHTML = 'Nederland moet meer geld uitgeven voor de ontwikkeling van arme landen.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:q30(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:q30(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:q30();");
+}
+function q30() {
+	console.log("Question 30()");
+	console.log(eens);
+	console.log(oneens);
+	console.log(geen);
+
+	var opt1 = document.getElementById('option1');
+	opt1.innerHTML = 'mee eens';
+	opt1.setAttribute("onClick", "javascript:r(); javascript:e()");
+
+	document.getElementById('level_title').innerHTML = 'Ontwikkelingshulp';
+	document.getElementById('description').innerHTML = 'Nederland moet meer geld uitgeven voor de ontwikkeling van arme landen.';
+
+	var opt2 = document.getElementById('option2');
+	opt2.innerHTML = 'geen van beide';
+	opt2.setAttribute("onClick", "javascript:r(); javascript:g()");
+
+	var opt3 = document.getElementById('option3');
+	opt3.innerHTML = 'mee on eens';
+	opt3.setAttribute("onClick", "javascript:r(); javascript:o()");
+
+	var opt4 = document.getElementById('option4');
+	opt4.innerHTML = 'sla deze vraag over';
+	opt4.setAttribute("onClick", "javascript:r();");
 }
