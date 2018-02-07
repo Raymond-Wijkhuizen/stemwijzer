@@ -8,7 +8,7 @@ html{
 main{
 	margin-left: 25%;
 	width: 50%;
-	height: 700px;
+	height: 400px;
 	background-color: white;
 }
 #main2{
@@ -31,4 +31,10 @@ button{
 	border-radius: 30px;
 	font-size: 20px;
 	color:white;
+}
+h3{
+	color: white;
+	margin-left: 20px;
+	position: relative;
+	top: 260px;
 }
