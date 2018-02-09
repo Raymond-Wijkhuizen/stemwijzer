@@ -268,6 +268,7 @@ var back = document.getElementById('back');
 var eens = document.getElementById('eens');
 var oneens = document.getElementById('oneens');
 var geen = document.getElementById('geen');
+var parties = document.getElementById('parties');
 
 
 // console.dir(subject);
@@ -297,8 +298,10 @@ var eens = function(event){
     var positions = subjects[nr].parties;
     for (i = 0; i < positions.length; i++) { 
    		if (positions[i].position == "pro") {
+   			punten[i].points++
+   			console.log(punten);
    			
-   			console.log(positions[i].name);
+   			
    		}
 	}	
 	nr++;
@@ -306,6 +309,7 @@ var eens = function(event){
 		results();
 	}
 }
+
 var geen = function(event){
 	choices.push("ambivalent");
 	console.log(choices);
@@ -314,7 +318,10 @@ var geen = function(event){
 	    var positions = subjects[nr].parties;
     for (i = 0; i < positions.length; i++) { 
    		if (positions[i].position == "ambivalent") {
-   			console.log(positions[i].name);
+   			punten[i].points++
+   			console.log(punten);
+   			
+   			
    		}
 	}	
 	nr++;
@@ -330,7 +337,10 @@ var oneens = function(event){
 	    var positions = subjects[nr].parties;
     for (i = 0; i < positions.length; i++) { 
    		if (positions[i].position == "contra") {
-   			console.log(positions[i].name);
+   			punten[i].points++
+   			console.log(punten);
+   			
+   			
    		}
 	}	
 	nr++;
@@ -346,8 +356,20 @@ var prev = function(event){
 	subject.innerHTML = subjects[nr].statement;
 }
 function results(){
+
 	title.innerHTML = "Resultaten";
-	subject.innerHTML = "test";
+	subject.innerHTML = choices;
+	party = "";
+for (i = 0; i < 20; i++) { 
+    party += punten[i].name + "-" + punten[i].points + "<br>";
+}
+	parties.innerHTML = party;
+	console.log(party);
+document.getElementById("e").style.display = "none";
+document.getElementById("o").style.display = "none";
+document.getElementById("g").style.display = "none";
+document.getElementById("next").style.display = "none";
+document.getElementById("main").style.height = "700px";
 }
 
 skip.onclick = next;
