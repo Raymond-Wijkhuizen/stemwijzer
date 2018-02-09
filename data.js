@@ -207,6 +207,10 @@ var subjects =
 	{name: "Piratenpartij", position: "contra", explanation: "De Piratenpartij is van mening dat het belastingklimaat gunstiger moet worden voor kleine ondernemers en ZZP'ers. Echter, een algehele verlaging van de vennootschapsbelasting zou ook de multinationals steunen terwijl veel kleine ondernemers er niks van merken omdat ze toch al geen vennootschapsbelasting betalen. Hiervoor zijn betere maatregelen te bedenken zoals bijvoorbeeld een hogere ondernemersaftrek."},
 	{name: "Artikel 1", position: "contra", explanation: "Bedrijven betalen nu al relatief weinig belasting in vergelijking met burgers."}
 	]
+},
+{
+	title: "+1",
+	statement: "eigenlijk moet je gewoon naar de resultaten",
 }
 ];
 
@@ -236,7 +240,28 @@ var parties = [
 var nr = 0;
 var choices = [];
 
-
+var punten = [
+	{name: "VVD", points: 0},
+	{name: "CDA", points: 0},
+	{name: "PVV", points: 0},
+	{name: "D66", points: 0},
+	{name: "GroenLinks", points: 0},
+	{name: "SP", points: 0},
+	{name: "PvdA", points: 0},
+	{name: "ChristenUnie", points: 0},
+	{name: "Partij voor de Dieren", points: 0},
+	{name: "SGP", points: 0},
+	{name: "DENK", points: 0},
+	{name: "Forum voor Democratie", points: 0},
+	{name: "Lokaal in de kamer", points: 0},
+	{name: "OndernemersPartij", points: 0},
+	{name: "VNL", points: 0},
+	{name: "Nieuwe Wegen", points: 0},
+	{name: "De Burger Beweging", points: 0},
+	{name: "Piratenpartij", points: 0},
+	{name: "Artikel 1", points: 0},
+	{name: "Libertarische Partij", points: 0}
+];
 var subject = document.getElementById('subject');
 var skip = document.getElementById('next');
 var back = document.getElementById('back');
@@ -258,36 +283,71 @@ var next = function(event){
 	console.log(choices);
 	title.innerHTML = subjects[nr].title;
 	subject.innerHTML = subjects[nr].statement;
+	if (nr == 7) {
+		results();
+	}
 }
 var eens = function(event){
-	nr++;
+	
 	choices.push("pro");
 	console.log(choices);
 	title.innerHTML = subjects[nr].title;
 	subject.innerHTML = subjects[nr].statement;
+	
+    var positions = subjects[nr].parties;
+    for (i = 0; i < positions.length; i++) { 
+   		if (positions[i].position == "pro") {
+   			
+   			console.log(positions[i].name);
+   		}
+	}	
+	nr++;
+	if (nr == 7) {
+		results();
+	}
 }
 var geen = function(event){
-	nr++;
 	choices.push("ambivalent");
 	console.log(choices);
 	title.innerHTML = subjects[nr].title;
 	subject.innerHTML = subjects[nr].statement;
+	    var positions = subjects[nr].parties;
+    for (i = 0; i < positions.length; i++) { 
+   		if (positions[i].position == "ambivalent") {
+   			console.log(positions[i].name);
+   		}
+	}	
+	nr++;
+	if (nr == 7) {
+		results();
+	}
 }
 var oneens = function(event){
-	nr++;
 	choices.push("contra");
 	console.log(choices);
 	title.innerHTML = subjects[nr].title;
 	subject.innerHTML = subjects[nr].statement;
+	    var positions = subjects[nr].parties;
+    for (i = 0; i < positions.length; i++) { 
+   		if (positions[i].position == "contra") {
+   			console.log(positions[i].name);
+   		}
+	}	
+	nr++;
+	if (nr == 7) {
+		results();
+	}
 }
-
 var prev = function(event){
 	nr--;
 	choices.pop();
 	console.log(choices);
 	title.innerHTML = subjects[nr].title;
 	subject.innerHTML = subjects[nr].statement;
-
+}
+function results(){
+	title.innerHTML = "Resultaten";
+	subject.innerHTML = "test";
 }
 
 skip.onclick = next;
