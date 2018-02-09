@@ -354,11 +354,17 @@ var prev = function(event){
 	console.log(choices);
 	title.innerHTML = subjects[nr].title;
 	subject.innerHTML = subjects[nr].statement;
+	parties.innerHTML = "";
+	document.getElementById("main").style.height = "400px";
+	document.getElementById("e").style.display = "visible";
+	document.getElementById("o").style.display = "visible";
+	document.getElementById("g").style.display = "visible";
+	document.getElementById("next").style.display = "visible";
 }
 function results(){
 
 	title.innerHTML = "Resultaten";
-	subject.innerHTML = choices;
+	subject.innerHTML = "";
 	party = "";
 for (i = 0; i < 20; i++) { 
     party += punten[i].name + "-" + punten[i].points + "<br>";
