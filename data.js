@@ -375,6 +375,8 @@ document.getElementById("e").style.display = "none";
 document.getElementById("o").style.display = "none";
 document.getElementById("g").style.display = "none";
 document.getElementById("next").style.display = "none";
+document.getElementById("next").style.display = "none";
+document.getElementById("back").style.display = "none";
 document.getElementById("main").style.height = "700px";
 }
 
